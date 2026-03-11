@@ -1,0 +1,696 @@
+{
+  "controls": [
+    {
+      "id": "c1",
+      "category": "Leakage",
+      "name": "Orphan Subscription",
+      "total": 2685,
+      "failing": 55,
+      "logic": "CB subscription exists but no HS company record"
+    },
+    {
+      "id": "c2",
+      "category": "Leakage",
+      "name": "Customer Without Subscription",
+      "total": 2696,
+      "failing": 125,
+      "logic": "HS Active customer but no CB active subscription"
+    },
+    {
+      "id": "c3",
+      "category": "Leakage",
+      "name": "Active Sub Without Invoice",
+      "total": 2685,
+      "failing": 14,
+      "logic": "Active subscription but no invoice generated"
+    },
+    {
+      "id": "c4",
+      "category": "Leakage",
+      "name": "Failed Payment Aging",
+      "total": 12407,
+      "failing": 3300,
+      "logic": "Failed payments unresolved beyond threshold"
+    },
+    {
+      "id": "c5",
+      "category": "Leakage",
+      "name": "Zero Value Subscription",
+      "total": 2685,
+      "failing": 46,
+      "logic": "Active subscription with $0 MRR"
+    },
+    {
+      "id": "c6",
+      "category": "Customer",
+      "name": "Active Customer Count Recon",
+      "total": 2696,
+      "failing": 11,
+      "logic": "HS Active: 2696 vs CB Active: 2685"
+    },
+    {
+      "id": "c7",
+      "category": "Customer",
+      "name": "Active Customer Record Match",
+      "total": 2696,
+      "failing": 125,
+      "logic": "HS companies not matched to CB customers"
+    },
+    {
+      "id": "c8",
+      "category": "Customer",
+      "name": "Invoice Without Payment Method",
+      "total": 8534,
+      "failing": 4488,
+      "logic": "CB customer missing card/payment method"
+    },
+    {
+      "id": "c9",
+      "category": "Lifecycle",
+      "name": "Status Mismatch",
+      "total": 2696,
+      "failing": 83,
+      "logic": "HS Active but CB subscription not active"
+    },
+    {
+      "id": "c10",
+      "category": "Lifecycle",
+      "name": "Churn Date Alignment",
+      "total": 1141,
+      "failing": 466,
+      "logic": "HS churn date vs CB cancelled date differ >7 days"
+    },
+    {
+      "id": "c11",
+      "category": "Lifecycle",
+      "name": "Closed-Won Deal Without Subscription",
+      "total": 66,
+      "failing": 0,
+      "logic": "HS deal closed but subscription missing in CB"
+    },
+    {
+      "id": "c12",
+      "category": "Revenue",
+      "name": "MRR Reconciliation",
+      "total": 1,
+      "failing": 1,
+      "logic": "HS MRR $938,793 vs CB MRR $941,855 \u2014 Delta $3,062",
+      "isSummary": true,
+      "hsMRR": 938793.0,
+      "cbMRR": 941855.0
+    },
+    {
+      "id": "c13",
+      "category": "Revenue",
+      "name": "ARR Reconciliation",
+      "total": 1,
+      "failing": 1,
+      "logic": "HS ARR $11,265,517 vs CB ARR $11,302,265 \u2014 Delta $36,748",
+      "isSummary": true,
+      "hsARR": 11265517.0,
+      "cbARR": 11302265.0
+    },
+    {
+      "id": "c14",
+      "category": "Revenue",
+      "name": "Invoice Amount Validation",
+      "total": 21485,
+      "failing": 424,
+      "logic": "Invoices with Payment Due or Not Paid status"
+    },
+    {
+      "id": "c15",
+      "category": "Renewal Integrity",
+      "name": "Renewal Closed but Sub Cancelled",
+      "total": 3061,
+      "failing": 183,
+      "logic": "HS Renewal Closed Won but CB subscription Cancelled"
+    },
+    {
+      "id": "c16",
+      "category": "Renewal Integrity",
+      "name": "Renewal Closed but Sub Missing",
+      "total": 4171,
+      "failing": 238,
+      "logic": "Renewal deal exists but no CB subscription linked"
+    },
+    {
+      "id": "c17",
+      "category": "Renewal Integrity",
+      "name": "Renewal MRR vs Billing MRR",
+      "total": 3101,
+      "failing": 1192,
+      "logic": "HS Renewal ARR/12 \u2260 CB subscription MRR by >$5"
+    }
+  ],
+  "records": [
+    {
+      "id": "51768409191",
+      "company": "Precision Neurology",
+      "customerId": "HS51768409191",
+      "hsStatus": "Active",
+      "hsMRR": 359.0,
+      "hsARR": 4308.0,
+      "cbStatus": "Active",
+      "cbMRR": 359.0,
+      "cbPlan": "Growth-USD-Yearly",
+      "issues": []
+    },
+    {
+      "id": "52624224666",
+      "company": "Winterholler Dental",
+      "customerId": "HS51726682156",
+      "hsStatus": "Active",
+      "hsMRR": 219.0,
+      "hsARR": 2628.0,
+      "cbStatus": "Active",
+      "cbMRR": 219.0,
+      "cbPlan": "Foundation-USD-Every-6-months",
+      "issues": []
+    },
+    {
+      "id": "51524632707",
+      "company": "Jordan Lieberman DDS LLC",
+      "customerId": "HS51524632707",
+      "hsStatus": "Active",
+      "hsMRR": 305.15,
+      "hsARR": 3661.8,
+      "cbStatus": "Active",
+      "cbMRR": 305.15,
+      "cbPlan": "Growth-USD-Yearly",
+      "issues": []
+    },
+    {
+      "id": "50775531437",
+      "company": "Michael R. Schwartz, M.D., F.A.C.S",
+      "customerId": "Azym3uVAU9rnF5Uhw",
+      "hsStatus": "Active",
+      "hsMRR": 409.0,
+      "hsARR": 4908.0,
+      "cbStatus": "Active",
+      "cbMRR": 409.0,
+      "cbPlan": "Growth-USD-Yearly",
+      "issues": []
+    },
+    {
+      "id": "50593353094",
+      "company": "Daniel O'Brien DMD LLC",
+      "customerId": "HS50593353094",
+      "hsStatus": "Active",
+      "hsMRR": 254.15,
+      "hsARR": 3049.8,
+      "cbStatus": "Active",
+      "cbMRR": 254.15,
+      "cbPlan": "Growth-USD-Every-6-months",
+      "issues": []
+    },
+    {
+      "id": "50617806732",
+      "company": "Midwest Compounders",
+      "customerId": "HS50617806732",
+      "hsStatus": "Active",
+      "hsMRR": 1148.0,
+      "hsARR": 13776.0,
+      "cbStatus": "Active",
+      "cbMRR": 1148.0,
+      "cbPlan": "Advanced-USD-Every-3-months",
+      "issues": []
+    },
+    {
+      "id": "50577440322",
+      "company": "On Klinic",
+      "customerId": "HS50577440322",
+      "hsStatus": "Active",
+      "hsMRR": 107.0,
+      "hsARR": 1284.0,
+      "cbStatus": "Active",
+      "cbMRR": 107.0,
+      "cbPlan": "Foundation-USD-Yearly",
+      "issues": []
+    },
+    {
+      "id": "50776037297",
+      "company": "Suffolk Spine & Joint Medical",
+      "customerId": "HS50428175000",
+      "hsStatus": "Active",
+      "hsMRR": 299.0,
+      "hsARR": 3588.0,
+      "cbStatus": "Active",
+      "cbMRR": 299.0,
+      "cbPlan": "Growth-USD-Yearly",
+      "issues": []
+    },
+    {
+      "id": "51219861343",
+      "company": "Circle Care Center",
+      "customerId": "HS51219861343",
+      "hsStatus": "Active",
+      "hsMRR": 737.95,
+      "hsARR": 8855.44,
+      "cbStatus": "Active",
+      "cbMRR": 737.95,
+      "cbPlan": "Growth-USD-Yearly",
+      "issues": []
+    },
+    {
+      "id": "50094601744",
+      "company": "Vanguard Spine and Pain ",
+      "customerId": "HS50094601744",
+      "hsStatus": "Active",
+      "hsMRR": 123.0,
+      "hsARR": 1476.0,
+      "cbStatus": "Active",
+      "cbMRR": 123.0,
+      "cbPlan": "Foundation-USD-Yearly",
+      "issues": []
+    },
+    {
+      "id": "50094352903",
+      "company": "2waystaffing, LLC",
+      "customerId": "HS50094352903",
+      "hsStatus": "Active",
+      "hsMRR": 107.0,
+      "hsARR": 1284.0,
+      "cbStatus": "Active",
+      "cbMRR": 107.0,
+      "cbPlan": "Foundation-USD-Yearly",
+      "issues": []
+    },
+    {
+      "id": "49570010978",
+      "company": "Vermont Plastic Surgery",
+      "customerId": "HS49570010978",
+      "hsStatus": "Active",
+      "hsMRR": 309.0,
+      "hsARR": 3708.0,
+      "cbStatus": "Active",
+      "cbMRR": 309.0,
+      "cbPlan": "Growth-USD-Yearly",
+      "issues": []
+    },
+    {
+      "id": "49508589719",
+      "company": "VIBRANCE MEDICAL SPA ",
+      "customerId": "AzZKxMVBWaOV85uUa",
+      "hsStatus": "Active",
+      "hsMRR": 379.0,
+      "hsARR": 4548.0,
+      "cbStatus": "Active",
+      "cbMRR": 379.0,
+      "cbPlan": "Foundation-USD-Yearly",
+      "issues": []
+    },
+    {
+      "id": "49295697211",
+      "company": "Lemora Solutions LLC",
+      "customerId": "HS49295697211",
+      "hsStatus": "Active",
+      "hsMRR": 269.0,
+      "hsARR": 3228.0,
+      "cbStatus": "Active",
+      "cbMRR": 269.0,
+      "cbPlan": "Growth-USD-Yearly",
+      "issues": []
+    },
+    {
+      "id": "49184022691",
+      "company": "28 North Consulting",
+      "customerId": "HS49184022691",
+      "hsStatus": "Active",
+      "hsMRR": 458.33,
+      "hsARR": 5500.0,
+      "cbStatus": "Active",
+      "cbMRR": 458.33,
+      "cbPlan": "Growth-USD-Yearly",
+      "issues": []
+    },
+    {
+      "id": "52448554105",
+      "company": "High Point Dental",
+      "customerId": "HS51874584432",
+      "hsStatus": "Active",
+      "hsMRR": 271.15,
+      "hsARR": 3253.8,
+      "cbStatus": null,
+      "cbMRR": null,
+      "cbPlan": null,
+      "issues": [
+        "No CB Subscription"
+      ]
+    },
+    {
+      "id": "51548179492",
+      "company": "Better Days Therapies",
+      "customerId": "HS51548179492",
+      "hsStatus": "Active",
+      "hsMRR": 339.0,
+      "hsARR": 4068.0,
+      "cbStatus": "Active",
+      "cbMRR": 349.0,
+      "cbPlan": "Growth-USD-Every-6-months",
+      "issues": [
+        "MRR Mismatch"
+      ]
+    },
+    {
+      "id": "49617835410",
+      "company": "Clear Min Health",
+      "customerId": "AzqKtKV9d2BUX349l",
+      "hsStatus": "Active",
+      "hsMRR": 146.7,
+      "hsARR": 1760.4,
+      "cbStatus": "Active",
+      "cbMRR": 162.7,
+      "cbPlan": "Foundation-USD-Yearly",
+      "issues": [
+        "MRR Mismatch"
+      ]
+    },
+    {
+      "id": "48757074004",
+      "company": "Ivy Pediatrics",
+      "customerId": "HS48757074004",
+      "hsStatus": "Active",
+      "hsMRR": 1202.04,
+      "hsARR": 14424.5,
+      "cbStatus": "Active",
+      "cbMRR": 1285.38,
+      "cbPlan": "Growth-USD-Yearly",
+      "issues": [
+        "MRR Mismatch"
+      ]
+    },
+    {
+      "id": "48608156037",
+      "company": "Carbon Technology Group",
+      "customerId": "HS48608156037",
+      "hsStatus": "Active",
+      "hsMRR": 139.0,
+      "hsARR": 1668.0,
+      "cbStatus": "Active",
+      "cbMRR": 147.0,
+      "cbPlan": "Foundation-USD-Every-6-months",
+      "issues": [
+        "MRR Mismatch"
+      ]
+    },
+    {
+      "id": "48325477030",
+      "company": "Metro Chicago Endodontics",
+      "customerId": "HS48325477030",
+      "hsStatus": "Active",
+      "hsMRR": 104.55,
+      "hsARR": 1254.6,
+      "cbStatus": "Active",
+      "cbMRR": 112.55,
+      "cbPlan": "Foundation-USD-Yearly",
+      "issues": [
+        "MRR Mismatch"
+      ]
+    },
+    {
+      "id": "47831219858",
+      "company": "Southwestern Dermatology",
+      "customerId": "HS47831219858",
+      "hsStatus": "Active",
+      "hsMRR": 280.0,
+      "hsARR": 3360.0,
+      "cbStatus": "Active",
+      "cbMRR": 690.0,
+      "cbPlan": "Growth-USD-Yearly",
+      "issues": [
+        "MRR Mismatch"
+      ]
+    },
+    {
+      "id": "47442124213",
+      "company": "MSO CHP ENT, LLC",
+      "customerId": "HS47442124213",
+      "hsStatus": "Active",
+      "hsMRR": 505.08,
+      "hsARR": 6060.96,
+      "cbStatus": "Active",
+      "cbMRR": 605.08,
+      "cbPlan": "Growth-USD-Yearly",
+      "issues": [
+        "MRR Mismatch"
+      ]
+    },
+    {
+      "id": "47403825981",
+      "company": "Ruby Health",
+      "customerId": "HS47403825981",
+      "hsStatus": "Active",
+      "hsMRR": 331.55,
+      "hsARR": 3978.6,
+      "cbStatus": "Active",
+      "cbMRR": 381.55,
+      "cbPlan": "Growth-USD-Yearly",
+      "issues": [
+        "MRR Mismatch"
+      ]
+    },
+    {
+      "id": "46906892098",
+      "company": "NovaDev LLC",
+      "customerId": "HS46906892098",
+      "hsStatus": "Active",
+      "hsMRR": 139.0,
+      "hsARR": 1668.0,
+      "cbStatus": null,
+      "cbMRR": null,
+      "cbPlan": null,
+      "issues": [
+        "No CB Subscription"
+      ]
+    },
+    {
+      "id": "45179307280",
+      "company": "Antoine Periodontics, PC",
+      "customerId": "HS45179307280",
+      "hsStatus": "Active",
+      "hsMRR": 124.95,
+      "hsARR": 1499.4,
+      "cbStatus": "Active",
+      "cbMRR": 132.95,
+      "cbPlan": "Foundation-USD-Yearly",
+      "issues": [
+        "MRR Mismatch"
+      ]
+    },
+    {
+      "id": "50094601912",
+      "company": "Boise River Dental",
+      "customerId": "16CMKsV4GfVdz4fka",
+      "hsStatus": "Active",
+      "hsMRR": 145.35,
+      "hsARR": 1744.2,
+      "cbStatus": "Active",
+      "cbMRR": 171.0,
+      "cbPlan": "Foundation-USD-Yearly",
+      "issues": [
+        "MRR Mismatch"
+      ]
+    },
+    {
+      "id": "43388919594",
+      "company": "Toms River Addiction Medicine",
+      "customerId": "HS43388919594",
+      "hsStatus": "Active",
+      "hsMRR": 123.0,
+      "hsARR": 1476.0,
+      "cbStatus": "Active",
+      "cbMRR": 131.0,
+      "cbPlan": "Foundation-USD-Yearly",
+      "issues": [
+        "MRR Mismatch"
+      ]
+    },
+    {
+      "id": "42719256165",
+      "company": "On-Time IT Solutions,",
+      "customerId": "HS42719256165",
+      "hsStatus": "Active",
+      "hsMRR": null,
+      "hsARR": null,
+      "cbStatus": null,
+      "cbMRR": null,
+      "cbPlan": null,
+      "issues": [
+        "No CB Subscription"
+      ]
+    },
+    {
+      "id": "42275122805",
+      "company": "AGS Continuum",
+      "customerId": "16BT8AV2GJrge2Xub",
+      "hsStatus": "Active",
+      "hsMRR": 99.0,
+      "hsARR": 1188.0,
+      "cbStatus": "Active",
+      "cbMRR": 115.0,
+      "cbPlan": "Foundation-USD-Yearly",
+      "issues": [
+        "MRR Mismatch"
+      ]
+    },
+    {
+      "id": "42043147439",
+      "company": "Maui Tech Support",
+      "customerId": "nan",
+      "hsStatus": "Active",
+      "hsMRR": null,
+      "hsARR": null,
+      "cbStatus": null,
+      "cbMRR": null,
+      "cbPlan": null,
+      "issues": [
+        "No CB Subscription"
+      ]
+    },
+    {
+      "id": "41520596255",
+      "company": "Dental Solutions of Binghamton",
+      "customerId": "HS41520596255",
+      "hsStatus": "Active",
+      "hsMRR": 449.0,
+      "hsARR": 5388.0,
+      "cbStatus": "Active",
+      "cbMRR": 407.15,
+      "cbPlan": "Growth-USD-Yearly",
+      "issues": [
+        "MRR Mismatch"
+      ]
+    },
+    {
+      "id": "40958644854",
+      "company": "Tri Cities Behavioral Therapy ",
+      "customerId": "HS40958644854",
+      "hsStatus": "Active",
+      "hsMRR": 288.0,
+      "hsARR": 3456.0,
+      "cbStatus": "Active",
+      "cbMRR": 230.4,
+      "cbPlan": "Growth-USD-Yearly",
+      "issues": [
+        "MRR Mismatch"
+      ]
+    },
+    {
+      "id": "40839797062",
+      "company": "Med Calls AI",
+      "customerId": "HS40839797062",
+      "hsStatus": "Active",
+      "hsMRR": 218.0,
+      "hsARR": 2616.0,
+      "cbStatus": "Active",
+      "cbMRR": 226.0,
+      "cbPlan": "Foundation-USD-Yearly",
+      "issues": [
+        "MRR Mismatch"
+      ]
+    },
+    {
+      "id": "40644402096",
+      "company": "Valuable Insight Inc.",
+      "customerId": "16CFs5V0wfXIh3HMP",
+      "hsStatus": "Active",
+      "hsMRR": 139.0,
+      "hsARR": 1668.0,
+      "cbStatus": "Active",
+      "cbMRR": 147.0,
+      "cbPlan": "Foundation-USD-Yearly",
+      "issues": [
+        "MRR Mismatch"
+      ]
+    },
+    {
+      "id": "40267422129",
+      "company": "M3 Networks",
+      "customerId": "HS40267422129",
+      "hsStatus": "Active",
+      "hsMRR": null,
+      "hsARR": null,
+      "cbStatus": null,
+      "cbMRR": null,
+      "cbPlan": null,
+      "issues": [
+        "No CB Subscription"
+      ]
+    },
+    {
+      "id": "39429370881",
+      "company": "NeuroHavenTMS",
+      "customerId": "HS39429370881",
+      "hsStatus": "Active",
+      "hsMRR": 274.55,
+      "hsARR": 3294.6,
+      "cbStatus": null,
+      "cbMRR": null,
+      "cbPlan": null,
+      "issues": [
+        "No CB Subscription"
+      ]
+    },
+    {
+      "id": "39282591790",
+      "company": "Beshara Group",
+      "customerId": "HS39282591790",
+      "hsStatus": "Active",
+      "hsMRR": 319.67,
+      "hsARR": 3836.0,
+      "cbStatus": "Active",
+      "cbMRR": 278.0,
+      "cbPlan": "Growth-USD-Every-6-months",
+      "issues": [
+        "MRR Mismatch"
+      ]
+    },
+    {
+      "id": "39267251866",
+      "company": "Maryland Integrative Medicine",
+      "customerId": "HS39267251866",
+      "hsStatus": "Active",
+      "hsMRR": 196.2,
+      "hsARR": 2354.4,
+      "cbStatus": "Active",
+      "cbMRR": 210.6,
+      "cbPlan": "Foundation-USD-Every-6-months",
+      "issues": [
+        "MRR Mismatch"
+      ]
+    },
+    {
+      "id": "39097420606",
+      "company": "Leong Plastic Surgery",
+      "customerId": "HS39097420606",
+      "hsStatus": "Active",
+      "hsMRR": 329.67,
+      "hsARR": 3956.0,
+      "cbStatus": "Active",
+      "cbMRR": 288.0,
+      "cbPlan": "Growth-USD-Yearly",
+      "issues": [
+        "MRR Mismatch"
+      ]
+    }
+  ],
+  "summary": {
+    "hsTotalCompanies": 7001,
+    "hsActiveCompanies": 2696,
+    "cbTotalCustomers": 8534,
+    "cbActiveSubscriptions": 2685,
+    "hsTotalMRR": 938793.0,
+    "cbTotalMRR": 941855.0,
+    "hsTotalARR": 11265517.0,
+    "cbTotalARR": 11302265.0,
+    "totalCredits": 1887063.0,
+    "failedPayments": 3300,
+    "renewalOutcomes": {
+      "Expansion": 2028,
+      "Flat": 1008,
+      "Churn": 743,
+      "Downsell": 145
+    }
+  }
+}
