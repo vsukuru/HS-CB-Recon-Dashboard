@@ -3,8 +3,41 @@
 <head>
     <title>Revenue Reconciliation Dashboard</title>
 </head>
+
 <body>
-    <h1>Revenue Reconciliation Dashboard</h1>
-    <p>Your dashboard will appear here.</p>
+
+<h1>Revenue Reconciliation Dashboard</h1>
+<h3>Reconciliation Dataset</h3>
+
+<div id="dashboard"></div>
+
+<script>
+
+fetch('recon_data.json')
+.then(response => response.json())
+.then(data => {
+
+    let html = "<table border='1' cellpadding='6'>";
+    
+    const keys = Object.keys(data[0]);
+    
+    html += "<tr>";
+    keys.forEach(k => html += "<th>" + k + "</th>");
+    html += "</tr>";
+
+    data.forEach(row => {
+        html += "<tr>";
+        keys.forEach(k => html += "<td>" + row[k] + "</td>");
+        html += "</tr>";
+    });
+
+    html += "</table>";
+
+    document.getElementById("dashboard").innerHTML = html;
+
+});
+
+</script>
+
 </body>
 </html>
